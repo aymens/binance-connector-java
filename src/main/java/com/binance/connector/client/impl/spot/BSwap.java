@@ -95,7 +95,7 @@ public class BSwap {
      *            where String is the name of the parameter and Object is the value of the parameter
      * <br><br>
      * poolId -- mandatory/long <br>
-     * type -- mandatory/string -- SINGLE for single asset removal, COMBINATION for combination of all coins removal <br>
+     * type -- mandatory/string -- SINGLE for single asset removal, COMBINATION for combination of all instrumentInfos removal <br>
      * asset -- optional/string <br>
      * shareAmount -- mandatory/decimal <br>
      * recvWindow -- optional/long <br>

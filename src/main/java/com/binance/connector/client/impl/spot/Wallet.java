@@ -41,7 +41,7 @@ public class Wallet {
 
     private final String COIN_INFO = "/sapi/v1/capital/config/getall";
     /**
-     * Get information of coins (available for deposit and withdraw) for user.
+     * Get information of instrumentInfos (available for deposit and withdraw) for user.
      * <br><br>
      * GET /sapi/v1/capital/config/getall
      * <br>
@@ -51,8 +51,8 @@ public class Wallet {
      * <br><br>
      * recvWindow -- optional/long <br>
      * @return String
-     * @see <a href="https://binance-docs.github.io/apidocs/spot/en/#all-coins-39-information-user_data">
-     *     https://binance-docs.github.io/apidocs/spot/en/#all-coins-39-information-user_data</a>
+     * @see <a href="https://binance-docs.github.io/apidocs/spot/en/#all-instrumentInfos-39-information-user_data">
+     *     https://binance-docs.github.io/apidocs/spot/en/#all-instrumentInfos-39-information-user_data</a>
      */
     public String coinInfo(LinkedHashMap<String,Object> parameters) {
         return requestHandler.sendSignedRequest(baseUrl, COIN_INFO, parameters, HttpMethod.GET, showLimitUsage);
@@ -128,7 +128,7 @@ public class Wallet {
      * withdrawOrderId -- optional/string -- client id for withdraw <br>
      * network -- optional/string <br>
      * address -- mandatory/string <br>
-     * addressTag -- optional/string -- Secondary address identifier for coins like XRP,XMR etc. <br>
+     * addressTag -- optional/string -- Secondary address identifier for instrumentInfos like XRP,XMR etc. <br>
      * amount -- mandatory/decimal <br>
      * transactionFeeFlag -- optional/boolean -- When making internal transfer, true for returning the fee to the destination account;
      *            false for returning the fee back to the departure account. Default false. <br>
